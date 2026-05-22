@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว - ปังปอนด์</title>
+    <title>Profile - Pangpond</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
-        /* ตั้งค่าพื้นฐาน */
+        :root {
+            --primary-blue: #87CEEB; /* สีฟ้าอ่อนหลัก */
+            --secondary-blue: #e0f2f7;
+            --dark-text: #2c3e50;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -18,25 +22,24 @@
         }
 
         body {
-            font-family: 'Prompt', sans-serif;
-            /* พื้นหลังไล่สีโทนฟ้าอ่อน */
-            background: linear-gradient(135deg, #e0f7fa 0%, #81d4fa 100%);
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f8ff;
+            color: var(--dark-text);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #333;
+            padding: 20px;
         }
 
-        /* การ์ดประวัติส่วนตัว */
+        /* Container หลัก */
         .profile-card {
-            background-color: #ffffff;
+            background: var(--white);
             width: 100%;
-            max-width: 400px;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            padding: 40px 30px;
-            text-align: center;
+            max-width: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
@@ -44,111 +47,149 @@
             transform: translateY(-5px);
         }
 
-        /* รูปโปรไฟล์ (ใช้ไอคอนแทนรูปจริง) */
-        .profile-pic {
+        /* ส่วนหัวสีฟ้า */
+        .header-bg {
+            background: linear-gradient(135deg, var(--primary-blue), #5f9ea0);
+            height: 120px;
+            position: relative;
+        }
+
+        /* รูปโปรไฟล์ (ตัวอย่างเป็น Icon ถ้ามีรูปจริงสามารถเปลี่ยนเป็น tag img ได้) */
+        .profile-image {
             width: 120px;
             height: 120px;
-            background-color: #e1f5fe;
+            background: var(--white);
             border-radius: 50%;
+            border: 5px solid var(--white);
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 20px;
-            border: 4px solid #4fc3f7;
-            color: #0288d1;
-            font-size: 3rem;
-            box-shadow: 0 8px 16px rgba(79, 195, 247, 0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        /* ชื่อและชื่อเล่น */
-        .name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #01579b;
+        .profile-image i {
+            font-size: 60px;
+            color: var(--primary-blue);
+        }
+
+        /* เนื้อหา */
+        .content {
+            padding: 80px 30px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.6rem;
             margin-bottom: 5px;
+            color: var(--dark-text);
         }
 
         .nickname {
-            font-size: 1.1rem;
-            color: #0288d1;
-            font-weight: 400;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.2rem;
             margin-bottom: 25px;
-            display: inline-block;
-            background-color: #e1f5fe;
-            padding: 4px 16px;
-            border-radius: 20px;
         }
 
-        /* ข้อมูลส่วนตัว */
-        .info-list {
-            list-style: none;
+        /* รายละเอียด */
+        .info-grid {
+            display: grid;
+            gap: 15px;
             text-align: left;
-            margin-top: 10px;
         }
 
-        .info-list li {
-            font-size: 1rem;
-            padding: 12px 0;
-            border-bottom: 1px dashed #b3e5fc;
+        .info-item {
+            background: var(--secondary-blue);
+            padding: 15px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
+            transition: background 0.3s;
         }
 
-        .info-list li:last-child {
-            border-bottom: none;
+        .info-item:hover {
+            background: #d1ecf1;
         }
 
-        .info-list i {
-            width: 35px;
-            height: 35px;
-            background-color: #e1f5fe;
-            color: #0288d1;
-            border-radius: 50%;
+        .info-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: 15px;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        .info-text span {
+            display: block;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .info-text p {
+            font-weight: 500;
             font-size: 1rem;
         }
 
-        .label {
-            font-weight: 600;
-            margin-right: 8px;
-            color: #555;
-        }
-
-        .value {
-            color: #333;
+        /* ตกแต่งสีที่ชอบเป็นพิเศษ */
+        .color-box {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: var(--primary-blue);
+            border-radius: 3px;
+            margin-left: 5px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
 
     <div class="profile-card">
-        <div class="profile-pic">
-            <i class="fa-solid fa-user-astronaut"></i>
+        <div class="header-bg">
+            <div class="profile-image">
+                <i class="fa-solid fa-user-astronaut"></i>
+            </div>
         </div>
-        
-        <h1 class="name">ด.ช.ศริตวรธน์ ยศเดชากิตติ์</h1>
-        <span class="nickname">น้องปังปอนด์</span>
-        
-        <ul class="info-list">
-            <li>
-                <i class="fa-solid fa-cake-candles"></i>
-                <span class="label">วันเกิด:</span> 
-                <span class="value">28 มีนาคม 2555</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-utensils"></i>
-                <span class="label">อาหารที่ชอบ:</span> 
-                <span class="value">ข้าวขาหมู</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-palette"></i>
-                <span class="label">สีที่ชอบ:</span> 
-                <span class="value">สีฟ้าอ่อน</span>
-            </li>
-        </ul>
+
+        <div class="content">
+            <h1>ด.ช.ศริตวรธน์ ยศเดชากิตติ์</h1>
+            <div class="nickname">ชื่อเล่น: ปังปอนด์</div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <div class="info-text">
+                        <span>วันเกิด</span>
+                        <p>28 มีนาคม 2555</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-utensils"></i>
+                    <div class="info-text">
+                        <span>อาหารที่ชอบ</span>
+                        <p>ข้าวขาหมู</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-palette"></i>
+                    <div class="info-text">
+                        <span>สีที่ชอบ</span>
+                        <p>สีฟ้าอ่อน <span class="color-box"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
