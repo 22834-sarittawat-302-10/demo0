@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว - ปังปอนด์</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            /* พื้นหลังไล่สีโทนฟ้าอ่อน */
+            background: linear-gradient(135deg, #e0f7fa 0%, #81d4fa 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* การ์ดประวัติส่วนตัว */
+        .profile-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* รูปโปรไฟล์ (ใช้ไอคอนแทนรูปจริง) */
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            background-color: #e1f5fe;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px;
+            border: 4px solid #4fc3f7;
+            color: #0288d1;
+            font-size: 3rem;
+            box-shadow: 0 8px 16px rgba(79, 195, 247, 0.3);
+        }
+
+        /* ชื่อและชื่อเล่น */
+        .name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #01579b;
+            margin-bottom: 5px;
+        }
+
+        .nickname {
+            font-size: 1.1rem;
+            color: #0288d1;
+            font-weight: 400;
+            margin-bottom: 25px;
+            display: inline-block;
+            background-color: #e1f5fe;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+
+        /* ข้อมูลส่วนตัว */
+        .info-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .info-list li {
+            font-size: 1rem;
+            padding: 12px 0;
+            border-bottom: 1px dashed #b3e5fc;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .info-list i {
+            width: 35px;
+            height: 35px;
+            background-color: #e1f5fe;
+            color: #0288d1;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 1rem;
+        }
+
+        .label {
+            font-weight: 600;
+            margin-right: 8px;
+            color: #555;
+        }
+
+        .value {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-pic">
+            <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+        
+        <h1 class="name">ด.ช.ศริตวรธน์ ยศเดชากิตติ์</h1>
+        <span class="nickname">น้องปังปอนด์</span>
+        
+        <ul class="info-list">
+            <li>
+                <i class="fa-solid fa-cake-candles"></i>
+                <span class="label">วันเกิด:</span> 
+                <span class="value">28 มีนาคม 2555</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-utensils"></i>
+                <span class="label">อาหารที่ชอบ:</span> 
+                <span class="value">ข้าวขาหมู</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-palette"></i>
+                <span class="label">สีที่ชอบ:</span> 
+                <span class="value">สีฟ้าอ่อน</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
