@@ -9,17 +9,13 @@
     
     <style>
         :root {
-            --primary-blue: #87CEEB; /* สีฟ้าอ่อนหลัก */
+            --primary-blue: #87CEEB; 
             --secondary-blue: #e0f2f7;
             --dark-text: #2c3e50;
             --white: #ffffff;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Kanit', sans-serif;
@@ -32,7 +28,6 @@
             padding: 20px;
         }
 
-        /* Container หลัก */
         .profile-card {
             background: var(--white);
             width: 100%;
@@ -43,18 +38,14 @@
             transition: transform 0.3s ease;
         }
 
-        .profile-card:hover {
-            transform: translateY(-5px);
-        }
+        .profile-card:hover { transform: translateY(-5px); }
 
-        /* ส่วนหัวสีฟ้า */
         .header-bg {
             background: linear-gradient(135deg, var(--primary-blue), #5f9ea0);
             height: 120px;
             position: relative;
         }
 
-        /* รูปโปรไฟล์ (ตัวอย่างเป็น Icon ถ้ามีรูปจริงสามารถเปลี่ยนเป็น tag img ได้) */
         .profile-image {
             width: 120px;
             height: 120px;
@@ -76,7 +67,6 @@
             color: var(--primary-blue);
         }
 
-        /* เนื้อหา */
         .content {
             padding: 80px 30px 40px;
             text-align: center;
@@ -95,7 +85,6 @@
             margin-bottom: 25px;
         }
 
-        /* รายละเอียด */
         .info-grid {
             display: grid;
             gap: 15px;
@@ -111,9 +100,7 @@
             transition: background 0.3s;
         }
 
-        .info-item:hover {
-            background: #d1ecf1;
-        }
+        .info-item:hover { background: #d1ecf1; }
 
         .info-item i {
             width: 40px;
@@ -139,7 +126,6 @@
             font-size: 1rem;
         }
 
-        /* ตกแต่งสีที่ชอบเป็นพิเศษ */
         .color-box {
             display: inline-block;
             width: 15px;
@@ -186,6 +172,14 @@
                     <div class="info-text">
                         <span>สีที่ชอบ</span>
                         <p>สีฟ้าอ่อน <span class="color-box"></span></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <div class="info-text">
+                        <span>วิชาที่ชอบ</span>
+                        <p>คณิตศาสตร์, ภาษาไทย</p>
                     </div>
                 </div>
             </div>
