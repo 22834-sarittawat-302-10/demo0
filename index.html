@@ -25,13 +25,13 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .profile-card {
             background: var(--white);
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -42,7 +42,7 @@
 
         .header-bg {
             background: linear-gradient(135deg, var(--primary-blue), #5f9ea0);
-            height: 120px;
+            height: 140px;
             position: relative;
         }
 
@@ -113,6 +113,7 @@
             margin-right: 15px;
             color: var(--primary-blue);
             font-size: 1.1rem;
+            flex-shrink: 0;
         }
 
         .info-text span {
@@ -135,6 +136,13 @@
             margin-left: 5px;
             vertical-align: middle;
         }
+
+        .motto {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -148,17 +156,82 @@
 
         <div class="content">
             <h1>ด.ช.ศริตวรธน์ ยศเดชากิตติ์</h1>
-            <div class="nickname">ชื่อเล่น: ปังปอนด์</div>
+            <div class="nickname">ชื่อเล่น: ปังปอนด์ (ม.3/2)</div>
 
             <div class="info-grid">
+                <!-- โรงเรียน -->
                 <div class="info-item">
-                    <i class="fa-solid fa-cake-candles"></i>
+                    <i class="fa-solid fa-school"></i>
                     <div class="info-text">
-                        <span>วันเกิด</span>
-                        <p>28 มีนาคม 2555</p>
+                        <span>โรงเรียน</span>
+                        <p>จอมทอง</p>
                     </div>
                 </div>
 
+                <!-- ภูมิลำเนา -->
+                <div class="info-item">
+                    <i class="fa-solid fa-house-user"></i>
+                    <div class="info-text">
+                        <span>ภูมิลำเนา</span>
+                        <p>เชียงใหม่</p>
+                    </div>
+                </div>
+
+                <!-- วันเกิด & ราศี -->
+                <div class="info-item">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <div class="info-text">
+                        <span>วันเกิด / ราศี</span>
+                        <p>28 มีนาคม 2555 (ราศีเมษ)</p>
+                    </div>
+                </div>
+
+                <!-- กรุ๊ปเลือด & ส่วนสูง -->
+                <div class="info-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="info-text">
+                        <span>กรุ๊ปเลือด / ส่วนสูง</span>
+                        <p>โอ (O) / 165 ซม.</p>
+                    </div>
+                </div>
+
+                <!-- อาชีพในฝัน -->
+                <div class="info-item">
+                    <i class="fa-solid fa-plane"></i>
+                    <div class="info-text">
+                        <span>ความฝัน / อาชีพ</span>
+                        <p>นักบิน</p>
+                    </div>
+                </div>
+
+                <!-- วิชาที่ชอบ & วิชาที่ยาก -->
+                <div class="info-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <div class="info-text">
+                        <span>วิชาที่ชอบ / วิชาที่ยาก</span>
+                        <p>คณิตศาสตร์, ภาษาไทย <span style="color: #e74c3c;">(ยาก: วิทยาศาสตร์)</span></p>
+                    </div>
+                </div>
+
+                <!-- ชมรม -->
+                <div class="info-item">
+                    <i class="fa-solid fa-calculator"></i>
+                    <div class="info-text">
+                        <span>ชมรม / กิจกรรม</span>
+                        <p>คณิตศาสตร์</p>
+                    </div>
+                </div>
+
+                <!-- ทักษะความสามารถ -->
+                <div class="info-item">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="info-text">
+                        <span>ทักษะความสามารถ</span>
+                        <p>ว่ายน้ำ, วิ่งเร็ว</p>
+                    </div>
+                </div>
+
+                <!-- อาหารโปรด -->
                 <div class="info-item">
                     <i class="fa-solid fa-utensils"></i>
                     <div class="info-text">
@@ -167,6 +240,7 @@
                     </div>
                 </div>
 
+                <!-- สีที่ชอบ -->
                 <div class="info-item">
                     <i class="fa-solid fa-palette"></i>
                     <div class="info-text">
@@ -175,21 +249,57 @@
                     </div>
                 </div>
 
+                <!-- งานอดิเรก -->
                 <div class="info-item">
-                    <i class="fa-solid fa-book-open"></i>
+                    <i class="fa-solid fa-heart"></i>
                     <div class="info-text">
-                        <span>วิชาที่ชอบ</span>
-                        <p>คณิตศาสตร์, ภาษาไทย</p>
+                        <span>งานอดิเรก</span>
+                        <p>วาดรูป, ฟังเพลง</p>
                     </div>
                 </div>
 
+                <!-- เพลงที่ชอบ -->
                 <div class="info-item">
-                    <i class="fa-solid fa-user-group"></i>
+                    <i class="fa-solid fa-music"></i>
                     <div class="info-text">
-                        <span>เพื่อนสนิท</span>
-                        <p>โชกิน</p>
+                        <span>เพลงที่ชอบ</span>
+                        <p>ซูปเปอร์สตาร์</p>
                     </div>
                 </div>
+
+                <!-- ซีรีส์/อนิเมะ -->
+                <div class="info-item">
+                    <i class="fa-solid fa-tv"></i>
+                    <div class="info-text">
+                        <span>ซีรีส์ / อนิเมะ</span>
+                        <p>คนชนเทพ</p>
+                    </div>
+                </div>
+
+                <!-- กีฬา -->
+                <div class="info-item">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <div class="info-text">
+                        <span>กีฬา</span>
+                        <p>ฟุตบอล</p>
+                    </div>
+                </div>
+
+                <!-- เพื่อนสนิท -->
+                <div class="info-item">
+                    <div class="info-item" style="padding: 0; background: none; width: 100%;">
+                        <i class="fa-solid fa-user-group"></i>
+                        <div class="info-text">
+                            <span>เพื่อนสนิท</span>
+                            <p>โชกิน</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- คติประจำใจ -->
+            <div class="motto">
+                <p><strong>คติประจำใจ:</strong> "made in japan"</p>
             </div>
         </div>
     </div>
